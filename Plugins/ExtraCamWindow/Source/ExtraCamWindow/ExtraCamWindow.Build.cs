@@ -3,18 +3,53 @@ using UnrealBuildTool;
 
 public class ExtraCamWindow : ModuleRules
 {
-	public ExtraCamWindow(TargetInfo Target)
+	public ExtraCamWindow(ReadOnlyTargetRules Target) : base(Target)
 	{
-        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "Slate", "SlateCore", "UMG" });
+		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
-        //Uncomment if you are using online features
-        // PrivateDependencyModuleNames.Add("OnlineSubsystem");
-        //if ((Target.Platform == UnrealTargetPlatform.Win32) || (Target.Platform == UnrealTargetPlatform.Win64))
-        //{
-        //    if (UEBuildConfiguration.bCompileSteamOSS == true)
-        //    {
-        //        DynamicallyLoadedModuleNames.Add("OnlineSubsystemSteam");
-        //    }
-        //}
+
+        PublicIncludePaths.AddRange(
+            new string[] {
+            }
+            );
+
+
+        PrivateIncludePaths.AddRange(
+            new string[] {
+            }
+            );
+
+        DynamicallyLoadedModuleNames.AddRange(
+            new string[]
+            {
+            }
+            );
+
+
+        PrivateDependencyModuleNames.AddRange(
+            new string[]
+            {
+                "Core",
+                "Projects",
+                "InputCore",
+                "UnrealEd",
+                "LevelEditor",
+                "CoreUObject",
+                "Engine",
+                "Slate",
+                "SlateCore",
+                "RHI", // For working with Back buffer and render targets
+                "Renderer",
+                "UMG"
+            }
+            );
+
+        PublicDependencyModuleNames.AddRange(
+            new string[]
+            {
+
+            }
+            );
+
     }
 }

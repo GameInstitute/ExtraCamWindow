@@ -1,6 +1,8 @@
 
 #pragma once
 
+#include "Camera/CameraActor.h"
+#include "Camera/PlayerCameraManager.h"
 #include "ExtraCamWindowActor.generated.h"
 
 UCLASS()
